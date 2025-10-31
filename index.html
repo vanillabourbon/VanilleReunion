@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Meta / SEO -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Premium Bourbon Vanilla Beans Reunion Island | Worldwide Shipping</title>
+  <meta name="description" content="Buy real Reunion Bourbon vanilla beans online. IGP certified, farm-direct, worldwide delivery 3-7 days." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Colors & base styles -->
+  <style>
+    /* Short comments for sections */
+    :root{
+      --bg:#faf8f5;
+      --gold:#d4a574;
+      --brown:#3a2417;
+      --muted:#7a6a5d;
+      --card-bg: #fff;
+      --radius:12px;
+      --max-width:1100px;
+      --shadow: 0 6px 18px rgba(58,36,23,0.08);
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--brown);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    a{color:var(--brown); text-decoration:none}
+    .container{
+      max-width:var(--max-width);
+      margin:32px auto;
+      padding:24px;
+    }
+
+    /* Header / hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:20px;
+      align-items:center;
+      background:linear-gradient(180deg, rgba(250,248,245,0.7), rgba(250,248,245,0.9));
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+    .hero-inner{
+      display:flex;
+      gap:24px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .hero-text h1{
+      margin:0 0 6px 0;
+      font-family:"Playfair Display", serif;
+      font-weight:700;
+      font-size: clamp(28px, 4vw, 42px);
+      color:var(--brown);
+      letter-spacing: -0.02em;
+    }
+    .hero-text p.lead{
+      margin:0 0 14px 0;
+      color:var(--muted);
+      font-weight:600;
+    }
+    .hero-cta{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .btn{
+      background:var(--gold);
+      color:white;
+      border:none;
+      padding:12px 18px;
+      border-radius:4px;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .btn.secondary{
+      background:transparent;
+      color:var(--brown);
+      border:1px solid rgba(58,36,23,0.08);
+    }
+    .hero-visual{
+      width:100%;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      min-height:160px;
+    }
+    .hero-visual img{
+      display:block;
+      width:100%;
+      height:auto;
+      object-fit:cover;
+    }
+
+    /* Sections spacing */
+    section{margin-top:28px}
+
+    /* Gallery - simple carousel */
+    .gallery{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+      align-items:start;
+    }
+    .carousel{
+      position:relative;
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .carousel img{width:100%;height:auto;display:block}
+    .carousel-controls{
+      position:absolute;
+      inset:0;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      pointer-events:none;
+    }
+    .carousel-controls button{
+      pointer-events:auto;
+      margin:0 8px;
+      background:rgba(255,255,255,0.85);
+      border:1px solid rgba(58,36,23,0.06);
+      padding:8px 10px;
+      border-radius:8px;
+      cursor:pointer;
+    }
+    .thumbs{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin-top:10px;
+    }
+    .thumbs img{width:100%;height:80px;object-fit:cover;border-radius:8px;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,0.04)}
+
+    /* Price grid (responsive cards acting like a table) */
+    .price-grid{
+      display:grid;
+      gap:12px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .price-card{
+      background:var(--card-bg);
+      padding:16px;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .price-info{flex:1}
+    .price-weight{font-family:"Playfair Display";font-size:20px;margin:0;color:var(--brown)}
+    .price-amount{font-weight:700;font-size:18px;margin:6px 0;color:var(--brown)}
+    .price-sub{color:var(--muted);font-size:14px}
+    .buy-wrap{width:220px}
+    .buy-wrap .btn{width:100%}
+
+    /* Advantages */
+    .advantages{
+      display:grid;
+      gap:10px;
+      grid-template-columns: repeat(1,1fr);
+    }
+    .adv{
+      background:var(--card-bg);
+      padding:12px;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .adv h4{margin:0;font-size:16px;font-weight:700}
+    .adv p{margin:0;color:var(--muted)}
+
+    /* Why Reunion */
+    .bullets{
+      display:grid;
+      gap:10px;
+    }
+    .bullet{
+      background:linear-gradient(180deg, #fff, #fff);
+      padding:12px;border-radius:10px;box-shadow:var(--shadow)
+    }
+
+    /* Delivery table (grid) */
+    .delivery-grid{display:grid;gap:12px}
+    .delivery-item{background:var(--card-bg);padding:12px;border-radius:10px;box-shadow:var(--shadow)}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* FAQ */
+    .faq{display:grid;gap:8px}
+    .qa{background:var(--card-bg);padding:12px;border-radius:10px;box-shadow:var(--shadow)}
+    .qa summary{font-weight:600;cursor:pointer;outline:none}
+
+    /* Footer */
+    footer{
+      margin-top:28px;
+      padding:18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+    footer a{color:var(--brown);font-weight:600}
+
+    /* Responsive breakpoints: 1 col <600, 2 col 600-900, 3 col >900 */
+    @media (min-width:600px){
+      .hero{grid-template-columns: 1fr 420px}
+      .gallery{grid-template-columns: 1fr 320px}
+      .price-grid{grid-template-columns: repeat(2, 1fr)}
+      .advantages{grid-template-columns:repeat(2,1fr)}
+      .bullets{grid-template-columns:repeat(2,1fr)}
+      .delivery-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (min-width:900px){
+      .container{padding:36px}
+      .gallery{grid-template-columns: 1fr 380px}
+      .price-grid{grid-template-columns: repeat(3, 1fr)}
+      .advantages{grid-template-columns:repeat(3,1fr)}
+      .bullets{grid-template-columns:repeat(3,1fr)}
+      .delivery-grid{grid-template-columns:repeat(3,1fr)}
+      .hero{grid-template-columns: 1fr 520px}
+    }
+
+    /* Minor utilities */
+    .muted{color:var(--muted)}
+    .kicker{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em}
+    .seo-note{font-size:13px;color:var(--muted);margin-top:8px}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <!-- HERO -->
+    <header class="hero" aria-label="Hero: Premium Bourbon vanilla beans">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="kicker">Reunion Island • Bourbon vanilla beans</div>
+          <h1>Handpicked Bourbon Vanilla — Reunion Island</h1>
+          <p class="lead">Hand-pollinated, sun-dried, IGP certified. Farm-direct, gourmet grade vanilla for chefs and bakers. Worldwide shipping.</p>
+
+          <div class="hero-cta">
+            <!-- main buy button uses 100 g as default quick action (75 €) -->
+            <a class="btn" href="https://paypal.me/reunionvanilla/75" aria-label="Buy 100 g Bourbon vanilla beans for 75 euros">Buy 100 g — €75</a>
+            <a class="btn secondary" href="#prices" aria-label="See full price list">See all sizes</a>
+          </div>
+
+          <p class="seo-note">Dried vanilla pods for culinary use, customs docs included. Bourbon vanilla beans Reunion Island • worldwide shipping.</p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="false">
+          <!-- hero banner placeholder 1920x600 blurred look -->
+          <img src="https://via.placeholder.com/1920x600.png?text=Reunion+Island+Tropical+View+%2B+Vanilla" alt="Bourbon vanilla beans Reunion Island">
+        </div>
+      </div>
+    </header>
+
+    <!-- GALLERY -->
+    <section aria-labelledby="gallery-title">
+      <h2 id="gallery-title" style="font-family:'Playfair Display', serif;margin:8px 0 12px 0">Gallery — Bourbon vanilla beans</h2>
+      <p class="muted" style="margin-top:0">High-detail photos showing pods, seeds, packaging and scale. Alt SEO present.</p>
+
+      <div class="gallery" id="gallery">
+        <!-- Carousel main -->
+        <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="Vanilla photo carousel">
+          <img id="carousel-img" src="https://via.placeholder.com/800x500.png?text=Close+up+3+pods+on+linen+beige" alt="Bourbon vanilla beans Reunion Island">
+          <div class="carousel-controls">
+            <button id="prev" aria-label="Previous image">◀</button>
+            <button id="next" aria-label="Next image">▶</button>
+          </div>
+        </div>
+
+        <!-- Thumbs -->
+        <div>
+          <div class="thumbs" id="thumbs" role="list">
+            <img role="listitem" data-src="https://via.placeholder.com/400x300.png?text=Close+up+3+pods+on+linen+beige" alt="Bourbon vanilla beans Reunion Island">
+            <img role="listitem" data-src="https://via.placeholder.com/400x300.png?text=Split+pod+showing+seeds" alt="Bourbon vanilla beans Reunion Island">
+            <img role="listitem" data-src="https://via.placeholder.com/400x300.png?text=Flat+lay+100g+sachet+kraft+%2B+bean+%2B+recipe" alt="Bourbon vanilla beans Reunion Island">
+            <img role="listitem" data-src="https://via.placeholder.com/400x300.png?text=Hand+holding+vanilla+pod+for+scale" alt="Bourbon vanilla beans Reunion Island">
+          </div>
+          <p class="small muted" style="margin-top:8px">Images representative: Bourbon vanilla beans — Reunion Island.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICES -->
+    <section id="prices" aria-labelledby="prices-title">
+      <h2 id="prices-title" style="font-family:'Playfair Display', serif;margin:8px 0 12px 0">Prices — Buy Bourbon vanilla beans</h2>
+      <p class="muted">Clear pricing in €. Price per kg shown in parentheses.</p>
+
+      <!-- Price grid (acts as responsive table) -->
+      <div class="price-grid" role="table" aria-label="Price table">
+        <!-- Price items: weight, price, price/kg, buy button -->
+        <!-- 50 g -->
+        <div class="price-card" role="row">
+          <div class="price-info" role="cell">
+            <div class="price-weight">50 g</div>
+            <div class="price-amount">€40</div>
+            <div class="price-sub">800 €/kg</div>
+          </div>
+          <div class="buy-wrap" role="cell">
+            <a class="btn" href="https://paypal.me/reunionvanilla/40" aria-label="Buy 50 g for 40 euros">Buy Now</a>
+          </div>
+        </div>
+
+        <!-- 100 g -->
+        <div class="price-card" role="row">
+          <div class="price-info" role="cell">
+            <div class="price-weight">100 g</div>
+            <div class="price-amount">€75</div>
+            <div class="price-sub">750 €/kg</div>
+          </div>
+          <div class="buy-wrap" role="cell">
+            <a class="btn" href="https://paypal.me/reunionvanilla/75" aria-label="Buy 100 g for 75 euros">Buy Now</a>
+          </div>
+        </div>
+
+        <!-- 200 g -->
+        <div class="price-card" role="row">
+          <div class="price-info" role="cell">
+            <div class="price-weight">200 g</div>
+            <div class="price-amount">€145</div>
+            <div class="price-sub">725 €/kg</div>
+          </div>
+          <div class="buy-wrap" role="cell">
+            <a class="btn" href="https://paypal.me/reunionvanilla/145" aria-label="Buy 200 g for 145 euros">Buy Now</a>
+          </div>
+        </div>
+
+        <!-- 300 g -->
+        <div class="price-card" role="row">
+          <div class="price-info" role="cell">
+            <div class="price-weight">300 g</div>
+            <div class="price-amount">€210</div>
+            <div class="price-sub">700 €/kg</div>
+          </div>
+          <div class="buy-wrap" role="cell">
+            <a class="btn" href="https://paypal.me/reunionvanilla/210" aria-label="Buy 300 g for 210 euros">Buy Now</a>
+          </div>
+        </div>
+
+        <!-- 400 g -->
+        <div class="price-card" role="row">
+          <div class="price-info" role="cell">
+            <div class="price-weight">400 g</div>
+            <div class="price-amount">€270</div>
+            <div class="price-sub">675 €/kg</div>
+          </div>
+          <div class="buy-wrap" role="cell">
+            <a class="btn" href="https://paypal.me/reunionvanilla/270" aria-label="Buy 400 g for 270 euros">Buy Now</a>
+          </div>
+        </div>
+
+        <!-- 500 g -->
+        <div class="price-card" role="row">
+          <div class="price-info" role="cell">
+            <div class="price-weight">500 g</div>
+            <div class="price-amount">€325</div>
+            <div class="price-sub">650 €/kg</div>
+          </div>
+          <div class="buy-wrap" role="cell">
+            <a class="btn" href="https://paypal.me/reunionvanilla/325" aria-label="Buy 500 g for 325 euros">Buy Now</a>
+          </div>
+        </div>
+
+        <!-- 1 kg -->
+        <div class="price-card" role="row">
+          <div class="price-info" role="cell">
+            <div class="price-weight">1 kg</div>
+            <div class="price-amount">€620</div>
+            <div class="price-sub">620 €/kg</div>
+          </div>
+          <div class="buy-wrap" role="cell">
+            <a class="btn" href="https://paypal.me/reunionvanilla/620" aria-label="Buy 1 kilogram for 620 euros">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <p class="small muted" style="margin-top:12px">All orders contain farm-direct Bourbon vanilla beans from Reunion Island. Customs paperwork included. Worldwide shipping.</p>
+    </section>
+
+    <!-- ADVANTAGES -->
+    <section aria-labelledby="advantages-title">
+      <h2 id="advantages-title" style="font-family:'Playfair Display', serif;margin:8px 0 12px 0">Why choose our vanilla?</h2>
+      <div class="advantages" role="list">
+        <div class="adv" role="listitem">
+          <div style="font-size:30px">✈️</div>
+          <div>
+            <h4>Worldwide shipping</h4>
+            <p>Fast delivery to chefs and bakers. Reliable worldwide shipping in 3-7 days to many countries.</p>
+          </div>
+        </div>
+
+        <div class="adv" role="listitem">
+          <div style="font-size:30px">🏅</div>
+          <div>
+            <h4>IGP certified</h4>
+            <p>Protected origin: Reunion Island Bourbon vanilla beans with certified quality and provenance.</p>
+          </div>
+        </div>
+
+        <div class="adv" role="listitem">
+          <div style="font-size:30px">🔬</div>
+          <div>
+            <h4>2.2% vanillin</h4>
+            <p>Gourmet pods with high natural vanillin — deep aroma for pastry, ice cream, and savory uses.</p>
+          </div>
+        </div>
+
+        <div class="adv" role="listitem">
+          <div style="font-size:30px">🌱</div>
+          <div>
+            <h4>Farm-direct</h4>
+            <p>Small-batch and traceable. We work with growers on Reunion Island for consistent quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY REUNION -->
+    <section aria-labelledby="why-title">
+      <h2 id="why-title" style="font-family:'Playfair Display', serif;margin:8px 0 12px 0">Why Reunion Island?</h2>
+      <div class="bullets">
+        <div class="bullet">
+          <strong>Unique terroir.</strong>
+          <p class="small muted">Volcanic soils and tropical climate give Bourbon vanilla beans a rich, complex flavor.</p>
+        </div>
+        <div class="bullet">
+          <strong>Traditional care.</strong>
+          <p class="small muted">Hand pollination and sun drying preserve aroma and oils.</p>
+        </div>
+        <div class="bullet">
+          <strong>IGP heritage.</strong>
+          <p class="small muted">Protected designation supports regional growers and guarantees origin.</p>
+        </div>
+        <div class="bullet">
+          <strong>Craft to kitchen.</strong>
+          <p class="small muted">From farm to shipping with traceability — ideal for chefs wanting authentic Bourbon vanilla beans.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVERY -->
+    <section aria-labelledby="delivery-title">
+      <h2 id="delivery-title" style="font-family:'Playfair Display', serif;margin:8px 0 12px 0">Delivery & lead times</h2>
+      <div class="delivery-grid">
+        <div class="delivery-item">
+          <strong>Europe</strong>
+          <p class="small muted">Priority: 3–5 business days. Tracking included.</p>
+        </div>
+        <div class="delivery-item">
+          <strong>North America</strong>
+          <p class="small muted">Priority: 4–7 business days. Customs clearance may apply.</p>
+        </div>
+        <div class="delivery-item">
+          <strong>Asia & Oceania</strong>
+          <p class="small muted">Priority: 4–7 business days. We include standard customs paperwork.</p>
+        </div>
+        <div class="delivery-item">
+          <strong>Rest of world</strong>
+          <p class="small muted">Priority: 5–10 business days. Times may vary by destination and customs.</p>
+        </div>
+      </div>
+      <p class="small muted" style="margin-top:10px">Note: Dried vanilla pods for culinary use. Customs docs included with each order.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section aria-labelledby="faq-title">
+      <h2 id="faq-title" style="font-family:'Playfair Display', serif;margin:8px 0 12px 0">FAQ</h2>
+      <div class="faq" itemscope itemtype="https://schema.org/FAQPage">
+        <details class="qa" open>
+          <summary itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <span itemprop="name">Are these real Bourbon vanilla beans from Reunion Island?</span>
+          </summary>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">Yes. We ship IGP certified Bourbon vanilla beans grown and processed on Reunion Island.</p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <span itemprop="name">How are pods stored and shipped?</span>
+          </summary>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">Pods are packed in kraft sachets or boxes, sealed and shipped with paperwork to ensure customs compliance.</p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <span itemprop="name">What is the vanillin content?</span>
+          </summary>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">Typical pods are around 2.2% natural vanillin — excellent for culinary use.</p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <span itemprop="name">Can I buy wholesale for a restaurant or bakery?</span>
+          </summary>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">Yes. For larger volumes or regular supply, contact us via email and we'll arrange farm-direct shipments.</p>
+          </div>
+        </details>
+
+        <details class="qa">
+          <summary itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <span itemprop="name">Do you include customs documents?</span>
+          </summary>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">Yes. Dried vanilla pods for culinary use, customs docs included with every order.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p><strong>Contact:</strong> <a href="mailto:reunionbourbonvanilla@gmail.com">reunionbourbonvanilla@gmail.com</a></p>
+      <p class="small muted">Premium Bourbon vanilla beans from Reunion Island — IGP certified, farm-direct, worldwide shipping.</p>
+      <p style="margin-top:8px">© 2025 Reunion Bourbon Vanilla</p>
+    </footer>
+  </div>
+
+  <!-- JSON-LD FAQ schema (requirements) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Are these real Bourbon vanilla beans from Reunion Island?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. We ship IGP certified Bourbon vanilla beans grown and processed on Reunion Island."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"How are pods stored and shipped?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Pods are packed in kraft sachets or boxes, sealed and shipped with paperwork to ensure customs compliance."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What is the vanillin content?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Typical pods are around 2.2% natural vanillin — excellent for culinary use."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Can I buy wholesale for a restaurant or bakery?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. For larger volumes or regular supply, contact us via email and we'll arrange farm-direct shipments."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Do you include customs documents?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. Dried vanilla pods for culinary use, customs docs included with every order."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Lightweight JS for gallery carousel and thumbs; no external libs -->
+  <script>
+    /* Carousel images array (placeholders). Each has the required SEO alt text already in img alt. */
+    (function(){
+      const images = [
+        {src:"https://via.placeholder.com/800x500.png?text=Close+up+3+pods+on+linen+beige", alt:"Bourbon vanilla beans Reunion Island"},
+        {src:"https://via.placeholder.com/800x500.png?text=Split+pod+showing+seeds", alt:"Bourbon vanilla beans Reunion Island"},
+        {src:"https://via.placeholder.com/800x500.png?text=Flat+lay+100g+sachet+kraft+%2B+bean+%2B+recipe", alt:"Bourbon vanilla beans Reunion Island"},
+        {src:"https://via.placeholder.com/800x500.png?text=Hand+holding+vanilla+pod+for+scale", alt:"Bourbon vanilla beans Reunion Island"},
+        {src:"https://via.placeholder.com/800x500.png?text=Reunion+Island+Tropical+View+%2B+Vanilla", alt:"Bourbon vanilla beans Reunion Island"}
+      ];
+      let index = 0;
+      const img = document.getElementById('carousel-img');
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      const thumbs = Array.from(document.querySelectorAll('#thumbs img'));
+
+      function show(i){
+        index = (i + images.length) % images.length;
+        img.src = images[index].src;
+        img.alt = images[index].alt;
+      }
+      prev.addEventListener('click', ()=> show(index-1));
+      next.addEventListener('click', ()=> show(index+1));
+
+      // thumbs click
+      thumbs.forEach((t, i)=>{
+        t.addEventListener('click', ()=> {
+          const s = t.getAttribute('data-src');
+          show(i);
+        });
+        // set thumbnail images initial
+        t.src = t.getAttribute('data-src');
+      });
+
+      // auto-advance every 6s (gentle)
+      let autoplay = setInterval(()=> show(index+1), 6000);
+      // pause on hover
+      const carousel = document.getElementById('carousel');
+      carousel.addEventListener('mouseenter', ()=> clearInterval(autoplay));
+      carousel.addEventListener('mouseleave', ()=> { autoplay = setInterval(()=> show(index+1), 6000); });
+
+      // init
+      show(0);
+    })();
+  </script>
+</body>
+</html>
